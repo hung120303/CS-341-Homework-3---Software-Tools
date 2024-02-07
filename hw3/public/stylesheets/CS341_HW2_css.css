@@ -3,6 +3,7 @@
 body{
 	background-color: Tomato;
 }
+/* Title of page */
 h1{
 	text-align: center;
 	border: 3px solid white;
@@ -11,6 +12,7 @@ h1{
 	font-family: "Brush Script MT", cursive;
 	font-size: 250%;
 }
+/* Headers for orders */
 h2{
 	text-align: center;
 	border: 2px solid white;
@@ -18,12 +20,14 @@ h2{
 	color:white;
 	font-family: Arial, Helvetica, sans-serif;
 }
+/* Border for cake image */
 img{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	border: 3px solid black;
 }
+/* List details */
 ul{
 	list-style-type: none;
 	color:white;
@@ -37,13 +41,16 @@ ul{
 	font-size: 133%;
 	
 }
+/* Background for quantity selection */
 select{
 	background-color: red;
 }
+/* Details for toppings */
 input{
 	background-color: green;
 	color: white;
 }
+/* Selection table details */
 table{
 	background-color: pink;
 	border: 1px solid white;
@@ -52,16 +59,18 @@ table{
 	margin-right: auto;
 	font-family: Papyrus, Fantasy;
 	color: brown;
-}
+}/* Textarea label */
 label{
 	color:black;
 	font-size: 70%
 }
+/* Textarea for order submission with notepad background */
 textarea{
 	background-image: url('https://media.istockphoto.com/id/91707849/photo/sheet-of-yellow-ruled-paper.jpg?s=612x612&w=0&k=20&c=RJAHwvSY_tJH27Wfo_xOdQOztxzlP9Xd5a1ZCw3Ued4=');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+/* Submission form is centered */
 form{
 	text-align: center;
 }

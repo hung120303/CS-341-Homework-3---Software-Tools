@@ -1,9 +1,14 @@
+		//Hung-Nghi Vu
+		//Script to run on document load time
 		$(document).ready(function(){
+			//Order button
 			$("#orderButton").click(function(){
+				//Record the quantity, topping, and order text
 				var order = $("#order").val();
 				var num = $("#number").val();
 				var topping;	
 		
+				//Set the topping in message to topping selected
 				if(document.getElementById("plain").checked == true){
 					topping = "plain";
 				}
@@ -14,9 +19,11 @@
 					topping = "chocolate";
 				}
 
+				//Alert warning if order contains vegan
 				if(order.includes("vegan")){
 					alert("WARNING: cheesecakes contain dairy");
 				}
+				//Otherwise, reveal the order message with details
 				else{
 					$("table").hide();
 					$("#notes").hide();
@@ -29,6 +36,7 @@
 				}
 			});
 
+			//For every month button under the dropdown menu, change the name of the dropdown to the month
 			$("#jan").click(function(){
 				document.getElementById("currMonth").innerHTML = "Jan";
 			});
