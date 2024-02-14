@@ -36,42 +36,18 @@
 				}
 			});
 
-			//For every month button under the dropdown menu, change the name of the dropdown to the month
-			$("#jan").click(function(){
-				document.getElementById("currMonth").innerHTML = "Jan";
-			});
-			$("#feb").click(function(){
-				document.getElementById("currMonth").innerHTML = "Feb";
-			});
-			$("#mar").click(function(){
-				document.getElementById("currMonth").innerHTML = "Mar";
-			});
-			$("#apr").click(function(){
-				document.getElementById("currMonth").innerHTML = "Apr";
-			});
-			$("#may").click(function(){
-				document.getElementById("currMonth").innerHTML = "May";
-			});
-			$("#jun").click(function(){
-				document.getElementById("currMonth").innerHTML = "Jun";
-			});
-			$("#jul").click(function(){
-				document.getElementById("currMonth").innerHTML = "Jul";
-			});
-			$("#aug").click(function(){
-				document.getElementById("currMonth").innerHTML = "Aug";
-			});
-			$("#sep").click(function(){
-				document.getElementById("currMonth").innerHTML = "Sep";
-			});
-			$("#oct").click(function(){
-				document.getElementById("currMonth").innerHTML = "Oct";
-			});
-			$("#nov").click(function(){
-				document.getElementById("currMonth").innerHTML = "Nov";
-			});
-			$("#dec").click(function(){
-				document.getElementById("currMonth").innerHTML = "Dec";
+			
+
+			//When a month button is clicked in the dropdown, change the month
+			$("#monthDropdown button").click(function(){
+				var currMonth = $(this).text();
+				document.getElementById("currMonth").innerHTML = currMonth;
+				//Change the lists order through the JSON order object
+				$.post('/orders', {month : currMonth}, function(data) {
+					document.getElementById("li1").innerHTML = data[0].quantity + " " + data[0].topping;
+					document.getElementById("li2").innerHTML = data[1].quantity + " " + data[1].topping;
+					document.getElementById("li3").innerHTML = data[2].quantity + " " + data[2].topping;
+				});
 			});
 		});
 
